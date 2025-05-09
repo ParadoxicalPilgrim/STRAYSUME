@@ -1,0 +1,161 @@
+/* Base Styles */
+:root {
+    /* Light Mode Colors */
+    --bg-color: #FFE5F5;
+    --card-color: #FFFFFF;
+    --text-color: #2D0C2C;
+    --pink-primary: #FF6F91;
+    --pink-secondary: #FFB6B9;
+    --border-radius: 12px;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dark-mode {
+    /* Dark Mode Colors */
+    --bg-color: rgb(40, 40, 40);
+    --card-color: pink;
+    --text-color: #fd0399;
+    --pink-primary: #fe6fb9;
+    --pink-secondary: #fc81df;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(255, 111, 145, 0.2);
+    transition: background-color 0.3s;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#appTitle {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--pink-primary);
+}
+
+.theme-button {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 2px solid var(--pink-primary);
+    color: var(--pink-primary);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-button:hover {
+    background-color: var(--pink-primary);
+    color: white;
+}
+
+/* Main Content */
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--pink-secondary);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: var(--pink-primary);
+}
+
+.add-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--pink-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-button:hover {
+    background-color: var(--pink-secondary);
+}
+
+/* Task List Styles */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 2px solid var(--pink-secondary);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: var(--text-color);
+}
+
+.task-text {
+    flex: 1;
+    margin-right: 1rem;
+    word-break: break-word;
+}
+
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-button {
+    padding: 0.4rem 0.6rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.complete-btn {
+    background-color: var(--pink-primary);
+    color: white;
+}
+
+.delete-btn {
+    background-color: #FF6F61;
+    color: white;
+}
+
+.task-button:hover {
+    opacity: 0.9;
+}
